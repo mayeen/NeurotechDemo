@@ -85,6 +85,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controller\IdentificationByScanner.cs" />
     <Compile Include="Controller\Verification.cs" />
     <Compile Include="Model\Connection.cs" />
     <Compile Include="Controller\EnrollmentFromImage.cs" />

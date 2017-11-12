@@ -36,6 +36,7 @@
             // 
             // txtSubjectID
             // 
+            this.txtSubjectID.AcceptsReturn = true;
             this.txtSubjectID.Location = new System.Drawing.Point(183, 49);
             this.txtSubjectID.Name = "txtSubjectID";
             this.txtSubjectID.Size = new System.Drawing.Size(100, 20);
@@ -82,6 +83,7 @@
             this.Controls.Add(this.txtSubjectID);
             this.Name = "EnrollView";
             this.Text = "EnrollView";
+            this.Load += new System.EventHandler(this.EnrollView_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

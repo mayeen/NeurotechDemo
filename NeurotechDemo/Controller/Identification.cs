@@ -19,7 +19,7 @@ namespace NeurotechDemo
     {
         public Identification(string subjectID)
         {
-            string fileName = "E:\\Fingerprint sample\\Latest Sample\\Second Template Generated";
+            string fileName = "E:\\Fingerprint sample\\Fingerprint Scanned By Scanner\\Scanned Sample Template";
             //  string subjectID = subjectID;   //it is requierd for veryfication 
             string components = "Biometrics.FingerMatching";
             try

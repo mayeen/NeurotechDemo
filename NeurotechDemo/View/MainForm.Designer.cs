@@ -33,13 +33,14 @@
             this.btnVerify = new System.Windows.Forms.Button();
             this.btnIdentify = new System.Windows.Forms.Button();
             this.btnEnroll = new System.Windows.Forms.Button();
+            this.btnIdentifyByScanner = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txtSubjectID
             // 
             this.txtSubjectID.Location = new System.Drawing.Point(176, 36);
             this.txtSubjectID.Name = "txtSubjectID";
-            this.txtSubjectID.Size = new System.Drawing.Size(100, 20);
+            this.txtSubjectID.Size = new System.Drawing.Size(139, 20);
             this.txtSubjectID.TabIndex = 0;
             this.txtSubjectID.TextChanged += new System.EventHandler(this.txtSubjectID_TextChanged);
             // 
@@ -82,11 +83,22 @@
             this.btnEnroll.UseVisualStyleBackColor = true;
             this.btnEnroll.Click += new System.EventHandler(this.btnEnroll_Click);
             // 
+            // btnIdentifyByScanner
+            // 
+            this.btnIdentifyByScanner.Location = new System.Drawing.Point(399, 226);
+            this.btnIdentifyByScanner.Name = "btnIdentifyByScanner";
+            this.btnIdentifyByScanner.Size = new System.Drawing.Size(123, 46);
+            this.btnIdentifyByScanner.TabIndex = 5;
+            this.btnIdentifyByScanner.Text = "Identify By Scanner";
+            this.btnIdentifyByScanner.UseVisualStyleBackColor = true;
+            this.btnIdentifyByScanner.Click += new System.EventHandler(this.btnIdentifyByScanner_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(704, 522);
+            this.Controls.Add(this.btnIdentifyByScanner);
             this.Controls.Add(this.btnEnroll);
             this.Controls.Add(this.btnIdentify);
             this.Controls.Add(this.btnVerify);
@@ -106,6 +118,7 @@
         private System.Windows.Forms.Button btnVerify;
         private System.Windows.Forms.Button btnIdentify;
         private System.Windows.Forms.Button btnEnroll;
+        private System.Windows.Forms.Button btnIdentifyByScanner;
     }
 }
 

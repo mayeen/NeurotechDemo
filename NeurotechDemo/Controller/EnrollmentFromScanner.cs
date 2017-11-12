@@ -92,6 +92,7 @@ namespace NeurotechDemo
                     subject.Id = subjectID;
                     //Create template from added finger image
                     status = biometricClient.CreateTemplate(subject);
+
                     if (status == NBiometricStatus.Ok)
 
                     {
@@ -138,7 +139,7 @@ namespace NeurotechDemo
                 }
                 }catch(Exception ex)
             {
-                MessageBox.Show("kam kore nai");
+                MessageBox.Show("didn't work");
 
             }
             }

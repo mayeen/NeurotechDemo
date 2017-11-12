@@ -17,10 +17,17 @@ namespace NeurotechDemo
         {
             InitializeComponent();
         }
-        String subjectID = "0";
+        public String subjectID;
+        public string SetSubjectID()
+        {
+            subjectID = txtSubjectID.Text;
+            EnrollView.MainForm = txtSubjectID.Text;
+            return subjectID;
+        }
         private void btnEnroll_Click(object sender, EventArgs e)
         {
-            EnrollView enrollView = new EnrollView();
+            string id = SetSubjectID();
+            EnrollView enrollView = new EnrollView(id);
             enrollView.Show();
         }
 
@@ -35,10 +42,17 @@ namespace NeurotechDemo
             Identification identification = new Identification(subjectID);
         }
 
-        private void txtSubjectID_TextChanged(object sender, EventArgs e)
+        public void txtSubjectID_TextChanged(object sender, EventArgs e)
         {
+            
             subjectID = txtSubjectID.Text;
             //MessageBox.Show();
+           
+        }
+
+        private void btnIdentifyByScanner_Click(object sender, EventArgs e)
+        {
+            IdentificationByScanner identificationByScanner = new IdentificationByScanner(subjectID);
         }
     }
 }

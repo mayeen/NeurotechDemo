@@ -22,7 +22,7 @@ namespace NeurotechDemo
             InitializeComponent();
             openFileDialog.Filter = NImages.GetOpenFileFilterString(true, true);
         }
-        public NImage _image;
+       // public NImage _image;
         //getting value from mainform txtSubjectID textbox. 
         private static string subjectID;
         public static string SubjectID

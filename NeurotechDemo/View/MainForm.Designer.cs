@@ -39,7 +39,7 @@
             // 
             // txtSubjectID
             // 
-            this.txtSubjectID.Location = new System.Drawing.Point(176, 36);
+            this.txtSubjectID.Location = new System.Drawing.Point(163, 37);
             this.txtSubjectID.Name = "txtSubjectID";
             this.txtSubjectID.Size = new System.Drawing.Size(139, 20);
             this.txtSubjectID.TabIndex = 0;
@@ -48,17 +48,18 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(40, 42);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(40, 37);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(95, 13);
+            this.label1.Size = new System.Drawing.Size(117, 16);
             this.label1.TabIndex = 1;
             this.label1.Text = "Subject ID number";
             // 
             // btnVerify
             // 
-            this.btnVerify.Location = new System.Drawing.Point(176, 138);
+            this.btnVerify.Location = new System.Drawing.Point(43, 169);
             this.btnVerify.Name = "btnVerify";
-            this.btnVerify.Size = new System.Drawing.Size(139, 40);
+            this.btnVerify.Size = new System.Drawing.Size(123, 29);
             this.btnVerify.TabIndex = 2;
             this.btnVerify.Text = "Verify";
             this.btnVerify.UseVisualStyleBackColor = true;
@@ -66,9 +67,9 @@
             // 
             // btnIdentify
             // 
-            this.btnIdentify.Location = new System.Drawing.Point(399, 138);
+            this.btnIdentify.Location = new System.Drawing.Point(43, 226);
             this.btnIdentify.Name = "btnIdentify";
-            this.btnIdentify.Size = new System.Drawing.Size(123, 40);
+            this.btnIdentify.Size = new System.Drawing.Size(123, 32);
             this.btnIdentify.TabIndex = 3;
             this.btnIdentify.Text = "Identify";
             this.btnIdentify.UseVisualStyleBackColor = true;
@@ -76,9 +77,9 @@
             // 
             // btnEnroll
             // 
-            this.btnEnroll.Location = new System.Drawing.Point(399, 36);
+            this.btnEnroll.Location = new System.Drawing.Point(43, 103);
             this.btnEnroll.Name = "btnEnroll";
-            this.btnEnroll.Size = new System.Drawing.Size(123, 41);
+            this.btnEnroll.Size = new System.Drawing.Size(123, 31);
             this.btnEnroll.TabIndex = 4;
             this.btnEnroll.Text = "Enrollment";
             this.btnEnroll.UseVisualStyleBackColor = true;
@@ -86,9 +87,9 @@
             // 
             // btnIdentifyByScanner
             // 
-            this.btnIdentifyByScanner.Location = new System.Drawing.Point(399, 226);
+            this.btnIdentifyByScanner.Location = new System.Drawing.Point(43, 288);
             this.btnIdentifyByScanner.Name = "btnIdentifyByScanner";
-            this.btnIdentifyByScanner.Size = new System.Drawing.Size(123, 46);
+            this.btnIdentifyByScanner.Size = new System.Drawing.Size(123, 30);
             this.btnIdentifyByScanner.TabIndex = 5;
             this.btnIdentifyByScanner.Text = "Identify By Scanner";
             this.btnIdentifyByScanner.UseVisualStyleBackColor = true;
@@ -108,7 +109,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(704, 522);
+            this.ClientSize = new System.Drawing.Size(682, 500);
             this.Controls.Add(this.btxExit);
             this.Controls.Add(this.btnIdentifyByScanner);
             this.Controls.Add(this.btnEnroll);

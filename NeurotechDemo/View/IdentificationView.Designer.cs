@@ -33,6 +33,7 @@
             this.btnIdentifyFromScanner = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.txtSubjectID = new System.Windows.Forms.TextBox();
+            this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.SuspendLayout();
             // 
             // btnBack
@@ -83,6 +84,10 @@
             this.txtSubjectID.TabIndex = 5;
             this.txtSubjectID.TextChanged += new System.EventHandler(this.txtSubjectID_TextChanged);
             // 
+            // openFileDialog
+            // 
+            this.openFileDialog.FileName = "openFileDialog";
+            // 
             // IdentificationView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -108,5 +113,6 @@
         private System.Windows.Forms.Button btnIdentifyFromScanner;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtSubjectID;
+        private System.Windows.Forms.OpenFileDialog openFileDialog;
     }
 }

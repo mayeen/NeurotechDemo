@@ -17,9 +17,9 @@ namespace NeurotechDemo
 {
     class IdentificationFromImage
     {
-        public IdentificationFromImage(string subjectID)
+        public IdentificationFromImage(string subjectID,string templateFile)
         {
-            string fileName = "E:\\Fingerprint sample\\Fingerprint Scanned By Scanner\\Scanned Sample Template";
+            //string fileName = "E:\\Fingerprint sample\\Fingerprint Scanned By Scanner\\Scanned Sample Template";
             //  string subjectID = subjectID;   //it is requierd for veryfication 
             string components = "Biometrics.FingerMatching";
             try
@@ -41,17 +41,17 @@ namespace NeurotechDemo
             // Read template
 
 
-            using (NSubject subject = CreateSubject(fileName, subjectID))
+            using (NSubject subject = CreateSubject(templateFile, subjectID))
             {
                 //Identification done from IdentificationFromDatabase constructor 
                 IdentificationFromDatabase identify = new IdentificationFromDatabase(subject);
                 
             }
         }
-        private static NSubject CreateSubject(string fileName, string subjectId)
+        private static NSubject CreateSubject(string templateFile, string subjectId)
         {
             var subject = new NSubject();
-            subject.SetTemplateBuffer(new NBuffer(File.ReadAllBytes(fileName)));
+            subject.SetTemplateBuffer(new NBuffer(File.ReadAllBytes(templateFile)));
             subject.Id = subjectId;
 
             return subject;

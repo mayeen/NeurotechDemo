@@ -15,9 +15,9 @@ using NeurotechDemo.Model;
 
 namespace NeurotechDemo
 {
-    class Identification
+    class IdentificationFromImage
     {
-        public Identification(string subjectID)
+        public IdentificationFromImage(string subjectID)
         {
             string fileName = "E:\\Fingerprint sample\\Fingerprint Scanned By Scanner\\Scanned Sample Template";
             //  string subjectID = subjectID;   //it is requierd for veryfication 

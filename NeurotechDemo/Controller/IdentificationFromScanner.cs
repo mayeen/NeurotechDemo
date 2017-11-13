@@ -15,9 +15,9 @@ using Neurotec.Devices;
 
 namespace NeurotechDemo.Controller
 {
-    class IdentificationByScanner
+    class IdentificationFromScanner
     {
-        public IdentificationByScanner(string subjectID)
+        public IdentificationFromScanner(string subjectID)
         {
             BdifStandard standard = BdifStandard.Unspecified;
             const string Components = "Biometrics.FingerExtraction,Biometrics.FingerMatching";

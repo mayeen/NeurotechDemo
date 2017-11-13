@@ -13,8 +13,10 @@ using Neurotec.Biometrics.Standards;
 namespace NeurotechDemo
 {
     class EnrollmentFromImage
+
     {
-        public EnrollmentFromImage(string subjectID)
+      
+        public EnrollmentFromImage(string subjectID, string imageFile)
         {
             BdifStandard standard = BdifStandard.Unspecified;
 
@@ -43,12 +45,15 @@ namespace NeurotechDemo
             using (var finger = new NFinger())
             {
                 //image location to create template 
-                string imageFile = "E:\\Fingerprint sample\\Latest Sample\\Fourth Finger.jpg";
+                //string imageFile = "E:\\Fingerprint sample\\Latest Sample\\Fourth Finger.jpg";
+              
+
+
 
                 finger.FileName = imageFile;
                 subject.Fingers.Add(finger);
                 subject.Id = subjectID; //ID number in the database
-
+                Console.WriteLine(finger.FileName);
                 //Set finger template size (recommended, for enroll to database, is large)
 
                 biometricClient.FingersTemplateSize = NTemplateSize.Large;

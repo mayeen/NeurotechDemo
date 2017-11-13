@@ -32,6 +32,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnEnrollFromScanner = new System.Windows.Forms.Button();
             this.btnEnrollFromImage = new System.Windows.Forms.Button();
+            this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
+            this.btnBack = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txtSubjectID
@@ -54,7 +56,7 @@
             // 
             // btnEnrollFromScanner
             // 
-            this.btnEnrollFromScanner.Location = new System.Drawing.Point(183, 190);
+            this.btnEnrollFromScanner.Location = new System.Drawing.Point(66, 103);
             this.btnEnrollFromScanner.Name = "btnEnrollFromScanner";
             this.btnEnrollFromScanner.Size = new System.Drawing.Size(147, 47);
             this.btnEnrollFromScanner.TabIndex = 2;
@@ -64,7 +66,7 @@
             // 
             // btnEnrollFromImage
             // 
-            this.btnEnrollFromImage.Location = new System.Drawing.Point(422, 190);
+            this.btnEnrollFromImage.Location = new System.Drawing.Point(66, 184);
             this.btnEnrollFromImage.Name = "btnEnrollFromImage";
             this.btnEnrollFromImage.Size = new System.Drawing.Size(147, 47);
             this.btnEnrollFromImage.TabIndex = 3;
@@ -72,11 +74,26 @@
             this.btnEnrollFromImage.UseVisualStyleBackColor = true;
             this.btnEnrollFromImage.Click += new System.EventHandler(this.btnEnrollFromImage_Click);
             // 
+            // openFileDialog
+            // 
+            this.openFileDialog.FileName = "openFileDialog";
+            // 
+            // btnBack
+            // 
+            this.btnBack.Location = new System.Drawing.Point(673, 392);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(93, 37);
+            this.btnBack.TabIndex = 4;
+            this.btnBack.Text = "Back";
+            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            // 
             // EnrollView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(807, 459);
+            this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnEnrollFromImage);
             this.Controls.Add(this.btnEnrollFromScanner);
             this.Controls.Add(this.label1);
@@ -95,5 +112,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnEnrollFromScanner;
         private System.Windows.Forms.Button btnEnrollFromImage;
+        private System.Windows.Forms.OpenFileDialog openFileDialog;
+        private System.Windows.Forms.Button btnBack;
     }
 }

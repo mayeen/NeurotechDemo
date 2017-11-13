@@ -33,3 +33,4 @@ c:\users\ddm-sd\documents\visual studio 2015\Projects\NeurotechDemo\NeurotechDem
 c:\users\ddm-sd\documents\visual studio 2015\Projects\NeurotechDemo\NeurotechDemo\bin\Debug\Neurotec.Licensing.xml
 c:\users\ddm-sd\documents\visual studio 2015\Projects\NeurotechDemo\NeurotechDemo\bin\Debug\Neurotec.Media.xml
 c:\users\ddm-sd\documents\visual studio 2015\Projects\NeurotechDemo\NeurotechDemo\bin\Debug\Neurotec.Media.Processing.xml
+C:\Users\DDM-SD\documents\visual studio 2015\Projects\NeurotechDemo\NeurotechDemo\obj\Debug\NeurotechDemo.IdentificationView.resources

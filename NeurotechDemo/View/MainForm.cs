@@ -17,17 +17,24 @@ namespace NeurotechDemo
         {
             InitializeComponent();
         }
+        //setting subject ID to Enrollview's subjectID
         public String subjectID;
         public string SetSubjectID()
         {
             subjectID = txtSubjectID.Text;
-            EnrollView.MainForm = txtSubjectID.Text;
+            EnrollView.SubjectID = txtSubjectID.Text;
             return subjectID;
         }
+
+
         private void btnEnroll_Click(object sender, EventArgs e)
         {
+            //getting id from SetSubjectID
             string id = SetSubjectID();
+
+            //sending it to enrollview constructor
             EnrollView enrollView = new EnrollView(id);
+
             enrollView.Show();
         }
 
@@ -38,8 +45,12 @@ namespace NeurotechDemo
 
         private void btnIdentify_Click(object sender, EventArgs e)
         {
+            string id = SetSubjectID();
+            IdentificationView identificationView = new IdentificationView(id);
+            identificationView.Show();
 
-            Identification identification = new Identification(subjectID);
+            //IdentificationFromImage identification = new IdentificationFromImage(subjectID);
+
         }
 
         public void txtSubjectID_TextChanged(object sender, EventArgs e)
@@ -52,7 +63,12 @@ namespace NeurotechDemo
 
         private void btnIdentifyByScanner_Click(object sender, EventArgs e)
         {
-            IdentificationByScanner identificationByScanner = new IdentificationByScanner(subjectID);
+            IdentificationFromScanner identificationByScanner = new IdentificationFromScanner(subjectID);
+        }
+
+        private void btxExit_Click(object sender, EventArgs e)
+        {
+            Dispose();
         }
     }
 }

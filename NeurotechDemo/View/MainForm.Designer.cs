@@ -34,6 +34,7 @@
             this.btnIdentify = new System.Windows.Forms.Button();
             this.btnEnroll = new System.Windows.Forms.Button();
             this.btnIdentifyByScanner = new System.Windows.Forms.Button();
+            this.btxExit = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txtSubjectID
@@ -93,11 +94,22 @@
             this.btnIdentifyByScanner.UseVisualStyleBackColor = true;
             this.btnIdentifyByScanner.Click += new System.EventHandler(this.btnIdentifyByScanner_Click);
             // 
+            // btxExit
+            // 
+            this.btxExit.Location = new System.Drawing.Point(575, 454);
+            this.btxExit.Name = "btxExit";
+            this.btxExit.Size = new System.Drawing.Size(84, 30);
+            this.btxExit.TabIndex = 6;
+            this.btxExit.Text = "Exit";
+            this.btxExit.UseVisualStyleBackColor = true;
+            this.btxExit.Click += new System.EventHandler(this.btxExit_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(704, 522);
+            this.Controls.Add(this.btxExit);
             this.Controls.Add(this.btnIdentifyByScanner);
             this.Controls.Add(this.btnEnroll);
             this.Controls.Add(this.btnIdentify);
@@ -105,7 +117,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtSubjectID);
             this.Name = "MainForm";
-            this.Text = "Form1";
+            this.Text = "Fingerprint Authentication";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -119,6 +131,7 @@
         private System.Windows.Forms.Button btnIdentify;
         private System.Windows.Forms.Button btnEnroll;
         private System.Windows.Forms.Button btnIdentifyByScanner;
+        private System.Windows.Forms.Button btxExit;
     }
 }
 

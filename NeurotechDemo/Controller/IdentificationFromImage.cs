@@ -26,7 +26,7 @@ namespace NeurotechDemo
             {
                 if (!NLicense.ObtainComponents("/local", 5000, components))
                 {
-
+            
                     throw new ApplicationException(string.Format("Could not obtain licenses for components: { 0 }", components));
                     // Console.WriteLine("obtained");
                 }

@@ -11,6 +11,7 @@ using Neurotec.Biometrics.Standards;
 using Neurotec.IO;
 using Neurotec.Devices;
 using System.Windows.Forms;
+using NeurotechDemo.Model;
 
 namespace NeurotechDemo
 {
@@ -103,26 +104,26 @@ namespace NeurotechDemo
                         // save image to file
                         using (var image = subject.Fingers[0].Image)
                         {
-                            image.Save("E:\\Fingerprint sample\\Fingerprint Scanned By Scanner\\Scanned Sample.jpg");
+                            image.Save(Config.saveImage() +"Scanned Sample.jpg");
                             MessageBox.Show("image saved successfully");
                         }
                         if (standard == BdifStandard.Iso)
                         {   //create BDifStandard.ISO template
-                            File.WriteAllBytes("E:\\Fingerprint sample\\Fingerprint Scanned By Scanner\\Scanned Sample ISO", subject.GetTemplateBuffer(CbeffBiometricOrganizations.IsoIecJtc1SC37Biometrics,
+                            File.WriteAllBytes(Config.FileDirectory() + "Scanned Sample ISO", subject.GetTemplateBuffer(CbeffBiometricOrganizations.IsoIecJtc1SC37Biometrics,
                                 CbeffBdbFormatIdentifiers.IsoIecJtc1SC37BiometricsFingerMinutiaeRecordFormat,
                                 FMRecord.VersionIsoCurrent).ToArray());
                         }
                         else if (standard == BdifStandard.Ansi)
                         {
                             //create BDifStandard.ANSI template
-                            File.WriteAllBytes("E:\\Fingerprint sample\\Fingerprint Scanned By Scanner\\Scanned Sample Template ANSI", subject.GetTemplateBuffer(CbeffBiometricOrganizations.IncitsTCM1Biometrics,
+                            File.WriteAllBytes(Config.FileDirectory() + "Scanned Sample Template ANSI", subject.GetTemplateBuffer(CbeffBiometricOrganizations.IncitsTCM1Biometrics,
                                 CbeffBdbFormatIdentifiers.IncitsTCM1BiometricsFingerMinutiaeU,
                                 FMRecord.VersionAnsiCurrent).ToArray());
                         }
                         else
                         {
                             //create general template  
-                            File.WriteAllBytes("E:\\Fingerprint sample\\Fingerprint Scanned By Scanner\\Scanned Sample Template", subject.GetTemplateBuffer().ToArray());
+                            File.WriteAllBytes(Config.FileDirectory() + "Scanned Sample Template", subject.GetTemplateBuffer().ToArray());
                         }
                         //enroll into database using EnrollToDatabase Constructor
                         EnrollToDatabase enrollToDatabase = new EnrollToDatabase(status, subject);   

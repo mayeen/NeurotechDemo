@@ -80,7 +80,7 @@
             // 
             // btnBack
             // 
-            this.btnBack.Location = new System.Drawing.Point(673, 392);
+            this.btnBack.Location = new System.Drawing.Point(652, 401);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(93, 37);
             this.btnBack.TabIndex = 4;
@@ -92,7 +92,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(807, 459);
+            this.ClientSize = new System.Drawing.Size(757, 450);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnEnrollFromImage);
             this.Controls.Add(this.btnEnrollFromScanner);

@@ -99,7 +99,7 @@ namespace NeurotechDemo.Controller
                 }
             } catch (Exception ex)
             {
-                Console.WriteLine("didn't work");
+                Console.WriteLine(ex.Message+"in Identification From Scanner");
             }
                 }
             }

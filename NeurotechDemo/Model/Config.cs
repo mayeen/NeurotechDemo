@@ -15,12 +15,16 @@ namespace NeurotechDemo.Model
         }
 
 
-        public string FileDirectory()
+        public static string FileDirectory()
         {
-            string path = @"E:\Fingerprint sample\Config Folder";
+            string path = @"E:\Fingerprint sample\Config Folder\";
             return path;
         }
-
+        public static string saveImage()
+        {
+            string path = @"E:\Fingerprint sample\Config Folder\Scanned Image\";
+            return path;
+        }
 
         public void Connection(NBiometricClient biometricClient)
         {

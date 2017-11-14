@@ -23,6 +23,7 @@ namespace NeurotechDemo
         {
             subjectID = txtSubjectID.Text;
             EnrollView.SubjectID = txtSubjectID.Text;
+            IdentificationView.SubjectID = txtSubjectID.Text;
             return subjectID;
         }
 

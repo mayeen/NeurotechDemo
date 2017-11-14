@@ -26,7 +26,7 @@ namespace NeurotechDemo
             set { subjectID = value; }
         }
 
-
+        string a = subjectID;
         private void btnIdentifyFromScanner_Click(object sender, EventArgs e)
         {
             IdentificationFromScanner identificationByScanner = new IdentificationFromScanner(subjectID);
@@ -66,7 +66,7 @@ namespace NeurotechDemo
 
         private void txtSubjectID_TextChanged(object sender, EventArgs e)
         {
-
+            txtSubjectID.Text = subjectID;
         }
     }
 }

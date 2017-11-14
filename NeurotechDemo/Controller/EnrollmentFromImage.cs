@@ -8,6 +8,7 @@ using Neurotec.Biometrics.Client;
 using Neurotec.Biometrics;
 using System.IO;
 using Neurotec.Biometrics.Standards;
+using NeurotechDemo.Model;
 
 
 namespace NeurotechDemo
@@ -70,21 +71,21 @@ namespace NeurotechDemo
                     Console.WriteLine("Template extracted");
                     if (standard == BdifStandard.Iso)
                     {   //create BDifStandard.ISO template
-                        File.WriteAllBytes("E:\\Fingerprint sample\\Latest Sample\\Fourth Template Generated ISO", subject.GetTemplateBuffer(CbeffBiometricOrganizations.IsoIecJtc1SC37Biometrics,
+                        File.WriteAllBytes(Config.FileDirectory() + "Fourth Template Generated ISO", subject.GetTemplateBuffer(CbeffBiometricOrganizations.IsoIecJtc1SC37Biometrics,
                             CbeffBdbFormatIdentifiers.IsoIecJtc1SC37BiometricsFingerMinutiaeRecordFormat,
                             FMRecord.VersionIsoCurrent).ToArray());
                     }
                     else if (standard == BdifStandard.Ansi)
                     {
                         //create BDifStandard.ANSI template
-                        File.WriteAllBytes("E:\\Fingerprint sample\\Latest Sample\\Fourth Template Generated ANSI", subject.GetTemplateBuffer(CbeffBiometricOrganizations.IncitsTCM1Biometrics,
+                        File.WriteAllBytes(Config.FileDirectory() + "Fourth Template Generated ANSI", subject.GetTemplateBuffer(CbeffBiometricOrganizations.IncitsTCM1Biometrics,
                             CbeffBdbFormatIdentifiers.IncitsTCM1BiometricsFingerMinutiaeU,
                             FMRecord.VersionAnsiCurrent).ToArray());
                     }
                     else
                     {
                         //create general template  
-                        File.WriteAllBytes("E:\\Fingerprint sample\\Latest Sample\\Fourth Finger Template Generated", subject.GetTemplateBuffer().ToArray());
+                        File.WriteAllBytes(Config.FileDirectory() + "Fourth Finger Template Generated", subject.GetTemplateBuffer().ToArray());
                     }
 
                     //enroll into database using EnrollToDatabase Constructor

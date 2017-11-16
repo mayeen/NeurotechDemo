@@ -11,7 +11,7 @@ using Neurotec.Biometrics.Standards;
 using Neurotec.IO;
 using System.Windows.Forms;
 using NeurotechDemo.Model;
-
+using NeurotechDemo.Controller;
 
 namespace NeurotechDemo
 {
@@ -19,24 +19,10 @@ namespace NeurotechDemo
     {
         public IdentificationFromImage(string subjectID,string templateFile)
         {
-            //string fileName = "E:\\Fingerprint sample\\Fingerprint Scanned By Scanner\\Scanned Sample Template";
-            //  string subjectID = subjectID;   //it is requierd for veryfication 
             string components = "Biometrics.FingerMatching";
-            try
-            {
-                if (!NLicense.ObtainComponents("/local", 5000, components))
-                {
-            
-                    throw new ApplicationException(string.Format("Could not obtain licenses for components: { 0 }", components));
-                    // Console.WriteLine("obtained");
-                }
+            //obtain license 
 
-            }
-            catch
-            {
-                Console.WriteLine(components);
-                //Console.ReadLine();
-            }
+            ControllerUtils.ObtainLicense(components);
             using (var biometricClient = new NBiometricClient())
             // Read template
 
@@ -44,8 +30,7 @@ namespace NeurotechDemo
             using (NSubject subject = CreateSubject(templateFile, subjectID))
             {
                 //Identification done from IdentificationFromDatabase constructor 
-                IdentificationFromDatabase identify = new IdentificationFromDatabase(subject);
-                
+                IdentificationFromDatabase identify = new IdentificationFromDatabase(subject);     
             }
         }
         private static NSubject CreateSubject(string templateFile, string subjectId)

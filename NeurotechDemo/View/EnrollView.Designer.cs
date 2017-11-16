@@ -34,6 +34,8 @@
             this.btnEnrollFromImage = new System.Windows.Forms.Button();
             this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.btnBack = new System.Windows.Forms.Button();
+            this.fingerView = new Neurotec.Biometrics.Gui.NFingerView();
+            this.lblQuality = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // txtSubjectID
@@ -88,11 +90,42 @@
             this.btnBack.UseVisualStyleBackColor = true;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
+            // fingerView
+            // 
+            this.fingerView.BackColor = System.Drawing.SystemColors.Control;
+            this.fingerView.BoundingRectColor = System.Drawing.Color.Red;
+            this.fingerView.Location = new System.Drawing.Point(309, 49);
+            this.fingerView.MinutiaColor = System.Drawing.Color.Red;
+            this.fingerView.Name = "fingerView";
+            this.fingerView.NeighborMinutiaColor = System.Drawing.Color.Orange;
+            this.fingerView.ResultImageColor = System.Drawing.Color.Green;
+            this.fingerView.SelectedMinutiaColor = System.Drawing.Color.Magenta;
+            this.fingerView.SelectedSingularPointColor = System.Drawing.Color.Magenta;
+            this.fingerView.ShownImage = Neurotec.Biometrics.Gui.ShownImage.Result;
+            this.fingerView.SingularPointColor = System.Drawing.Color.Red;
+            this.fingerView.Size = new System.Drawing.Size(298, 336);
+            this.fingerView.TabIndex = 5;
+            this.fingerView.TreeColor = System.Drawing.Color.Crimson;
+            this.fingerView.TreeMinutiaNumberDiplayFormat = Neurotec.Biometrics.Gui.MinutiaNumberDiplayFormat.DontDisplay;
+            this.fingerView.TreeMinutiaNumberFont = new System.Drawing.Font("Arial", 10F);
+            this.fingerView.TreeWidth = 2D;
+            // 
+            // lblQuality
+            // 
+            this.lblQuality.AutoSize = true;
+            this.lblQuality.Location = new System.Drawing.Point(34, 424);
+            this.lblQuality.Name = "lblQuality";
+            this.lblQuality.Size = new System.Drawing.Size(39, 13);
+            this.lblQuality.TabIndex = 6;
+            this.lblQuality.Text = "Quality";
+            // 
             // EnrollView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(757, 450);
+            this.Controls.Add(this.lblQuality);
+            this.Controls.Add(this.fingerView);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnEnrollFromImage);
             this.Controls.Add(this.btnEnrollFromScanner);
@@ -114,5 +147,7 @@
         private System.Windows.Forms.Button btnEnrollFromImage;
         private System.Windows.Forms.OpenFileDialog openFileDialog;
         private System.Windows.Forms.Button btnBack;
+        private Neurotec.Biometrics.Gui.NFingerView fingerView;
+        private System.Windows.Forms.Label lblQuality;
     }
 }

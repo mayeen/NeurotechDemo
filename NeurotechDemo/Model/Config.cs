@@ -14,6 +14,21 @@ namespace NeurotechDemo.Model
 
         }
 
+        public static string TemplateNameISO()
+        {
+            string path =Config.FileDirectory()+ "Template ISO";
+            return path;
+        }
+        public static string TemplateNameANSI()
+        {
+            string path = Config.FileDirectory() + "Template ANSI";
+            return path;
+        }
+        public static string TemplateNameGeneral()
+        {
+            string path = Config.FileDirectory() + "Template General";
+            return path;
+        }
 
         public static string FileDirectory()
         {

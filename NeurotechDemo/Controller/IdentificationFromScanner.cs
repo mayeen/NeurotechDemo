@@ -12,29 +12,26 @@ using Neurotec.IO;
 using System.Windows.Forms;
 using NeurotechDemo.Model;
 using Neurotec.Devices;
+using NeurotechDemo.Controller;
 
-namespace NeurotechDemo.Controller
+
+namespace NeurotechDemo
 {
     class IdentificationFromScanner
     {
         public IdentificationFromScanner(string subjectID)
         {
-            BdifStandard standard = BdifStandard.Unspecified;
-            const string Components = "Biometrics.FingerExtraction,Biometrics.FingerMatching";
-            try
-            {
-                if (!NLicense.ObtainComponents("/local", 5000, Components))
-                {
-                    throw new ApplicationException(string.Format("Could not obtain licenses for components: {0}", Components));
-                }
-                using (var biometricClient = new NBiometricClient { UseDeviceManager = true })
+          
+            const string components = "Biometrics.FingerExtraction,Biometrics.FingerMatching";
+            //Obtain license
+            ControllerUtils.ObtainLicense(components);
+
+            using (var biometricClient = new NBiometricClient { UseDeviceManager = true })
                 using (var deviceManager = biometricClient.DeviceManager)
                 using (var subject = new NSubject())
                 using (var finger = new NFinger())
                 {
-                    // conenction to database
-                    biometricClient.SetDatabaseConnectionToOdbc("Dsn=mssql_dsn;UID=sa;PWD=ddm@TT", "subjects");
-
+                    
                     //set type of the device used
                     deviceManager.DeviceTypes = NDeviceType.FingerScanner;
                     //initialize the NDeviceManager
@@ -97,10 +94,7 @@ namespace NeurotechDemo.Controller
                     IdentificationFromDatabase idm = new IdentificationFromDatabase(subject);
 
                 }
-            } catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message+"in Identification From Scanner");
-            }
+           
                 }
             }
 }

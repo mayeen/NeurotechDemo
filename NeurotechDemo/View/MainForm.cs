@@ -37,6 +37,7 @@ namespace NeurotechDemo
             EnrollView enrollView = new EnrollView(id);
 
             enrollView.Show();
+            this.Hide();
         }
 
         private void btnVerify_Click(object sender, EventArgs e)
@@ -49,7 +50,7 @@ namespace NeurotechDemo
             string id = SetSubjectID();
             IdentificationView identificationView = new IdentificationView(id);
             identificationView.Show();
-
+            this.Hide();
             //IdentificationFromImage identification = new IdentificationFromImage(subjectID);
 
         }
@@ -62,11 +63,7 @@ namespace NeurotechDemo
            
         }
 
-        private void btnIdentifyByScanner_Click(object sender, EventArgs e)
-        {
-            IdentificationFromScanner identificationByScanner = new IdentificationFromScanner(subjectID);
-        }
-
+       
         private void btxExit_Click(object sender, EventArgs e)
         {
             Dispose();

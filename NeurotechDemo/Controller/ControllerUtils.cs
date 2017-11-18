@@ -10,6 +10,8 @@ using System.IO;
 using NeurotechDemo.Model;
 using System.Windows.Forms;
 using Neurotec.Licensing;
+using Neurotec.Biometrics.Client;
+using Neurotec.Devices;
 
 namespace NeurotechDemo.Controller
 {
@@ -19,7 +21,29 @@ namespace NeurotechDemo.Controller
         {
 
         }
-
+        public NSubject FingerViewController(NSubject subject, NBiometricClient biometricClient)
+        {
+            using (biometricClient = new NBiometricClient { UseDeviceManager = true })
+            using (var deviceManager = biometricClient.DeviceManager)
+            {
+                deviceManager.DeviceTypes = NDeviceType.FingerScanner;
+                deviceManager.Initialize();
+                biometricClient.FingerScanner = (NFScanner)deviceManager.Devices[0];
+                if(biometricClient.FingerScanner == null)
+                {
+                    MessageBox.Show("Please connect your fingerprint scanner");
+                }            
+               else{
+                    NFinger subjectFinger = new NFinger();
+                    MessageBox.Show("Place your finger on the scanner");
+                    subjectFinger.CaptureOptions = NBiometricCaptureOptions.Stream;
+                    subject = new NSubject();
+                    subject.Fingers.Add(subjectFinger);
+                }
+                
+            }
+            return subject;
+        }
         //save template into directory
         public static void SaveTemplate(NSubject subject)
         {

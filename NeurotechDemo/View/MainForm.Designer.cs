@@ -33,8 +33,9 @@
             this.btnVerify = new System.Windows.Forms.Button();
             this.btnIdentify = new System.Windows.Forms.Button();
             this.btnEnroll = new System.Windows.Forms.Button();
-            this.btnIdentifyByScanner = new System.Windows.Forms.Button();
             this.btxExit = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // txtSubjectID
@@ -57,7 +58,7 @@
             // 
             // btnVerify
             // 
-            this.btnVerify.Location = new System.Drawing.Point(43, 169);
+            this.btnVerify.Location = new System.Drawing.Point(6, 84);
             this.btnVerify.Name = "btnVerify";
             this.btnVerify.Size = new System.Drawing.Size(123, 29);
             this.btnVerify.TabIndex = 2;
@@ -67,7 +68,7 @@
             // 
             // btnIdentify
             // 
-            this.btnIdentify.Location = new System.Drawing.Point(43, 226);
+            this.btnIdentify.Location = new System.Drawing.Point(6, 157);
             this.btnIdentify.Name = "btnIdentify";
             this.btnIdentify.Size = new System.Drawing.Size(123, 32);
             this.btnIdentify.TabIndex = 3;
@@ -77,23 +78,13 @@
             // 
             // btnEnroll
             // 
-            this.btnEnroll.Location = new System.Drawing.Point(43, 103);
+            this.btnEnroll.Location = new System.Drawing.Point(6, 19);
             this.btnEnroll.Name = "btnEnroll";
             this.btnEnroll.Size = new System.Drawing.Size(123, 31);
             this.btnEnroll.TabIndex = 4;
             this.btnEnroll.Text = "Enrollment";
             this.btnEnroll.UseVisualStyleBackColor = true;
             this.btnEnroll.Click += new System.EventHandler(this.btnEnroll_Click);
-            // 
-            // btnIdentifyByScanner
-            // 
-            this.btnIdentifyByScanner.Location = new System.Drawing.Point(43, 288);
-            this.btnIdentifyByScanner.Name = "btnIdentifyByScanner";
-            this.btnIdentifyByScanner.Size = new System.Drawing.Size(123, 30);
-            this.btnIdentifyByScanner.TabIndex = 5;
-            this.btnIdentifyByScanner.Text = "Identify By Scanner";
-            this.btnIdentifyByScanner.UseVisualStyleBackColor = true;
-            this.btnIdentifyByScanner.Click += new System.EventHandler(this.btnIdentifyByScanner_Click);
             // 
             // btxExit
             // 
@@ -105,20 +96,30 @@
             this.btxExit.UseVisualStyleBackColor = true;
             this.btxExit.Click += new System.EventHandler(this.btxExit_Click);
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.btnEnroll);
+            this.groupBox1.Controls.Add(this.btnVerify);
+            this.groupBox1.Controls.Add(this.btnIdentify);
+            this.groupBox1.Location = new System.Drawing.Point(43, 92);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(153, 216);
+            this.groupBox1.TabIndex = 7;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Select Option";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(682, 500);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btxExit);
-            this.Controls.Add(this.btnIdentifyByScanner);
-            this.Controls.Add(this.btnEnroll);
-            this.Controls.Add(this.btnIdentify);
-            this.Controls.Add(this.btnVerify);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtSubjectID);
             this.Name = "MainForm";
             this.Text = "Fingerprint Authentication";
+            this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -131,8 +132,8 @@
         private System.Windows.Forms.Button btnVerify;
         private System.Windows.Forms.Button btnIdentify;
         private System.Windows.Forms.Button btnEnroll;
-        private System.Windows.Forms.Button btnIdentifyByScanner;
         private System.Windows.Forms.Button btxExit;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }
 

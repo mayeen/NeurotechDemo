@@ -116,6 +116,7 @@
     <Compile Include="Model\VerificationFromDatabase.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="View\ViewUtils.cs" />
     <EmbeddedResource Include="View\IdentificationView.resx">
       <DependentUpon>IdentificationView.cs</DependentUpon>
     </EmbeddedResource>

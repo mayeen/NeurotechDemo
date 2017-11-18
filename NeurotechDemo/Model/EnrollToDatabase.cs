@@ -8,7 +8,7 @@ using Neurotec.Biometrics.Client;
 using Neurotec.Biometrics;
 using System.IO;
 using Neurotec.Biometrics.Standards;
-
+using System.Windows.Forms;
 
 namespace NeurotechDemo
 {
@@ -28,11 +28,11 @@ namespace NeurotechDemo
             status = enrollTask.Status;
             if (status != NBiometricStatus.Ok)
             {
-                Console.WriteLine("Enrollment was unsuccessful. Status: {0}.", status);
+                MessageBox.Show("Enrollment was unsuccessful. status:"+ status);
                 if (enrollTask.Error != null) throw enrollTask.Error;
                 // return -1;
             }
-            Console.WriteLine(String.Format("Enrollment was successful."));
+            MessageBox.Show("Enrollment was successful.");
         }
 
     }

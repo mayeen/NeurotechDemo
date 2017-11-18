@@ -21,21 +21,7 @@ namespace NeurotechDemo.Controller
                 string fileName = "E:\\Fingerprint sample\\Latest Sample\\Second Template Generated";
                  
                 string components = "Biometrics.FingerMatching";
-                try
-                {
-                    if (!NLicense.ObtainComponents("/local", 5000, components))
-                    {
-
-                        throw new ApplicationException(string.Format("Could not obtain licenses for components: { 0 }", components));
-                        // Console.WriteLine("obtained");
-                    }
-
-                }
-                catch
-                {
-                    Console.WriteLine(components);
-                    //Console.ReadLine();
-                }
+                ControllerUtils.ObtainLicense(components);
                 using (var biometricClient = new NBiometricClient())
                 // Read template
 

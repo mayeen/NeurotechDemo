@@ -23,8 +23,8 @@ namespace NeurotechDemo.Model
 
             if (status != NBiometricStatus.Ok)
             {
-                Console.WriteLine("Identification was unsuccessful. Status: {0}.", status);
-                Console.ReadLine();
+               MessageBox.Show("Identification was unsuccessful. Status:" + status);
+               // Console.ReadLine();
                 if (identifyTask.Error != null) throw identifyTask.Error;
                 //return -1;
 

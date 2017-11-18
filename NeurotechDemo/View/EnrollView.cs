@@ -104,13 +104,12 @@ namespace NeurotechDemo
                     biometricClient.FingersReturnBinarizedImage = true;
 
                     NBiometricTask task = biometricClient.CreateTask(NBiometricOperations.Capture/* | NBiometricOperations.CreateTemplate*/, subject);
-                    //NBiometricStatus status = biometricClient.Capture(subject);
-                    //status = biometricClient.CreateTemplate(subject);
                     var performTask = await biometricClient.PerformTaskAsync(task);
-                   
-                     EnrollmentFromScanner enrollmentFromScanner = new EnrollmentFromScanner(subjectID,subject);
-                    //MessageBox.Show("Enrollment done by scanner");
+                    EnrollmentFromScanner enrollmentFromScanner = new EnrollmentFromScanner(subjectID, subject);
+                    fingerView.ClearSelectedArea();
                 }
+                //MessageBox.Show("Enrollment done by scanner");
+                
             }
         }
 
@@ -135,7 +134,10 @@ namespace NeurotechDemo
         private void btnBack_Click(object sender, EventArgs e)
         {
             //disposal of this page.
+            MainForm mainform = new MainForm();
+            mainform.Show();
             Dispose();
+            
         
         }
     } 
